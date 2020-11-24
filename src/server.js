@@ -3,11 +3,13 @@ const routes = require("./routes/routes");
 
 const app = express();
 
+const PORT = process.env.PORT || 3333;
+
 app.use(express.json());
 app.use(routes);
 
-app.listen(process.env.PORT || 3333, () => {
-  console.log("***Back-end started on port 3333***");
+app.listen(PORT, () => {
+  console.log(`***Back-end started on port ${PORT}***`);
 });
 
 //https://hero-nodemailer.herokuapp.com/
